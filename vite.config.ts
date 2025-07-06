@@ -1,20 +1,21 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import dts from "vite-plugin-dts";
+import pkg from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    dts({
-      insertTypesEntry: true
-    })
-  ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/main.ts"),
-      formats: ["umd"],
-      name: "getFullPath"
-    }
+      entry: resolve(__dirname, "lib/main.ts"),
+      formats: ["umd", "es"],
+      name: "typed-utilities"
+    },
+    rollupOptions: {
+      external: [...Object.keys(pkg.dependencies), /^node:.*/]
+    },
+    target: "esnext"
   },
-  resolve: { alias: { src: resolve("src/") } }
+  plugins: [dts()],
+  resolve: { alias: { src: resolve("lib/") } }
 });
