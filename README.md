@@ -1,28 +1,26 @@
-# typed-utilities
+# typed-toolkit
 
 A strongly and strictly typed utilities library, providing advanced type inference and runtime helpers.
 
 ## Features
 
-- **Type-safe dynamic path utilities:**
-  validate, and extract dynamic parameters from route strings like `/user/:id/profile/:tab` with full TypeScript type inference and replace them with their respective values.
-- **Runtime and compile-time safety:**
-  Ensures your route parameters match your path structure, both at runtime and in your editor.
-- **Flexible parameter passing:**
-  Supports passing parameters as arrays or objects.
+1. **getFullPath**
+   - Validate and extract dynamic parameters from route strings like `/user/:id/profile/:tab` with full TypeScript type inference, replacing them with their respective values.
+   - Ensures your route parameters match your path structure, both at runtime and in your editor for maximum safety.
+   - Supports passing parameters as arrays or objects for flexible usage.
 
 ## Installation
 
 ```bash
-pnpm add typed-utilities
+pnpm add typed-toolkit
 # or
-npm install typed-utilities
+npm install typed-toolkit
 ```
 
 ## Usage
 
 ```ts
-import { getFullPath } from "typed-utilities";
+import { getFullPath } from "typed-toolkit";
 
 // Using array parameters
 const path1 = getFullPath("/user/:id/profile/:tab", "123", "settings");

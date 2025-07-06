@@ -9,7 +9,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "lib/index.ts"),
       formats: ["umd"],
-      name: "typed-utilities",
+      name: "typed-toolkit",
       fileName: "index.ts"
     },
     rollupOptions: {
