@@ -7,9 +7,10 @@ import pkg from "./package.json";
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "lib/main.ts"),
-      formats: ["umd", "es"],
-      name: "typed-utilities"
+      entry: resolve(__dirname, "lib/index.ts"),
+      formats: ["umd"],
+      name: "typed-utilities",
+      fileName: "index.ts"
     },
     rollupOptions: {
       external: [...Object.keys(pkg.dependencies), /^node:.*/]

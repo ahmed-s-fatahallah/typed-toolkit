@@ -2,21 +2,15 @@
   "name": "typed-utilities",
   "version": "1.0.0",
   "type": "module",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
     "prepare": "husky"
-  },
-  "main": "./dist/typed-utilities.umd.cjs",
-  "module": "./dist/typed-utilities.js",
-  "types": "./dist/main.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/typed-utilities.js",
-      "require": "./dist/typed-utilities.umd.cjs"
-    }
   },
   "files": [
     "dist"
