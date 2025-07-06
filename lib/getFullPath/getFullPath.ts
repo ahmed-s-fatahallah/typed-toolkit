@@ -4,7 +4,7 @@ import type {
   ParamsAsObject,
   ReturnedPath,
   ValidPath
-} from "./types/getFullPath";
+} from "./../types/getFullPath";
 
 export const getFullPath = <
   TPath extends string,
