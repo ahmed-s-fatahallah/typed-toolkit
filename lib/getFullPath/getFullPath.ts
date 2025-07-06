@@ -6,6 +6,29 @@ import type {
   ValidPath
 } from "./../types/getFullPath";
 
+/**
+ * Replace dynamic path segments with their respective values.
+ *
+ * @example
+ * getFullPath("/:foo/:bar", { foo: "hello", bar: "world" });
+ * // "/hello/world"
+ *
+ * @example
+ * getFullPath("/:foo/:bar", "hello", "world");
+ * // "/hello/world"
+ *
+ * @example
+ * getFullPath("/:foo/:bar", { foo: "hello" });
+ * // throws an error, because :bar is not provided
+ *
+ * @example
+ * getFullPath("/:foo/:bar", "hello");
+ * // throws an error, because :bar is not provided
+ *
+ * @param path - a string path with dynamic segments
+ * @param params - either an object with the dynamic segments as keys, or an array of strings
+ * @returns a string with the dynamic segments replaced
+ */
 export const getFullPath = <
   TPath extends string,
   TParams extends
