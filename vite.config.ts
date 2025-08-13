@@ -10,7 +10,7 @@ export default defineConfig({
       entry: resolve(__dirname, "lib/index.ts"),
       formats: ["umd"],
       name: "typed-toolkit",
-      fileName: "index.ts"
+      fileName: "index"
     },
     rollupOptions: {
       external: [...Object.keys(pkg.dependencies), /^node:.*/]
