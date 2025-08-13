@@ -4,8 +4,9 @@
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.umd.cjs",
-  "module": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "tsc && vite build",
     "preview": "vite preview",
