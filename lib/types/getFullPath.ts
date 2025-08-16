@@ -58,9 +58,7 @@ export type ExtractDynamicSegments<
     : ExtractDynamicSegments<R, [...TSlugs]>
   : TPath extends `:${infer TSlugName}`
     ? [...TSlugs, TSlugName]
-    : TPath extends ""
-      ? TSlugs
-      : never;
+    : TSlugs;
 
 // Check if the provided route matched the correct format
 export type ValidPath<TPath extends string> =
