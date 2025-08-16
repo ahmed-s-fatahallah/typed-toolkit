@@ -1,6 +1,6 @@
 {
   "name": "typed-toolkit",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.umd.cjs",
